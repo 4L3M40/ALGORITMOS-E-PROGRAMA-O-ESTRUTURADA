@@ -18,14 +18,14 @@ int main() {
     media_2022 = (tv_2022 + noteb_2022 + smart_2022) / 3.0;
 
     // Impressão das médias
-    printf("Média de produtos vendidos em 2020: %.2f\n", media_2020);
-    printf("Média de produtos vendidos em 2021: %.2f\n", media_2021);
-    printf("Média de produtos vendidos em 2022: %.2f\n\n", media_2022);
+    printf("Media de produtos vendidos em 2020: %.2f\n", media_2020);
+    printf("Media de produtos vendidos em 2021: %.2f\n", media_2021);
+    printf("Media de produtos vendidos em 2022: %.2f\n\n", media_2022);
 
     // Comparações lógicas
-    printf("2020 obteve a maior média? %d\n", (media_2020 > media_2021) && (media_2020 > media_2022));
-    printf("2021 obteve a maior média? %d\n", (media_2021 > media_2020) && (media_2021 > media_2022));
-    printf("2022 obteve a maior média? %d\n", (media_2022 > media_2020) && (media_2022 > media_2021));
+    printf("2020 obteve a maior media? %d\n", (media_2020 > media_2021) && (media_2020 > media_2022));
+    printf("2021 obteve a maior media? %d\n", (media_2021 > media_2020) && (media_2021 > media_2022));
+    printf("2022 obteve a maior media? %d\n", (media_2022 > media_2020) && (media_2022 > media_2021));
 
     return 0;
 }
