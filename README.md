@@ -1,4 +1,4 @@
-# 📘 Exemplos em C
+# 📘 ALGORITMOS E PROGRAMAÇÃO ESTRUTURADA
 
 Este repositório contém **exemplos práticos em linguagem C**, criados para fins de estudo e prática.  
 A ideia é reunir pequenos programas que demonstram conceitos básicos da linguagem, como variáveis, constantes, entrada e saída de dados, cálculos simples e boas práticas de programação.
