@@ -1,75 +1,101 @@
-# 📘 ALGORITMOS E PROGRAMAÇÃO ESTRUTURADA
+# ALGORITMOS E PROGRAMAÇÃO ESTRUTURADA (C)
 
-Este repositório contém **exemplos práticos em linguagem C**, criados para fins de estudo e prática.  
-A ideia é reunir pequenos programas que demonstram conceitos básicos da linguagem, como variáveis, constantes, entrada e saída de dados, cálculos simples e boas práticas de programação.
+Material de apoio com exercícios práticos da disciplina **Algoritmos e Programação Estruturada** (Engenharia de Software).  
+Os exemplos estão em **C**, com foco em consolidar fundamentos, estruturas de controle, vetores/matrizes, `structs` e ponteiros.
 
----
+## 📁 Estrutura do repositório
 
-## 📂 Estrutura do Repositório
+```
+.
+├─ U1-fundamento-de-algoritimos-e-programação/
+├─ U2-estrutura-de-controle-e-repetição/
+├─ U3-vetores-matrizes-structs-ponteiros/
+└─ .vscode/   (configurações do VS Code, se aplicável)
+```
 
-Cada pasta contém um exemplo independente:
+Cada pasta agrupa exercícios por unidade/tema da disciplina.
 
-- **hello-world/**  
-  Primeiro programa em C, imprime uma mensagem na tela.
+## 🚀 Como executar os exercícios
 
-- **leitura-inteiro/**  
-  Exemplo de leitura e escrita de um número inteiro digitado pelo usuário.
+> Requisitos: **GCC** (ou MinGW no Windows) e terminal (bash, PowerShell, CMD). Qualquer editor de texto/IDE funciona; recomenda-se **VS Code**.
 
-- **leitura-variaveis/**  
-  Programa que lê diferentes tipos de variáveis (char, float, etc.) e exibe os valores.
+### Linux / macOS
+No diretório do exercício (onde está o `main.c` ou o arquivo fonte principal):
 
-- **media-dois-numeros/**  
-  Programa que lê dois números e calcula a média aritmética.
-
-- **variaveis-constantes/**  
-  Demonstração do uso de variáveis e constantes em C.
-
-*(novos exemplos serão adicionados conforme o aprendizado evolui)*
-
----
-
-## 🚀 Como compilar e executar
-
-Para compilar os programas, é necessário ter o compilador **GCC** instalado.  
-
-### No **Linux/Mac**:
 ```bash
 gcc main.c -o programa
 ./programa
 ```
 
-### No **Windows (PowerShell ou CMD)**:
-```bash
+### Windows (PowerShell/CMD)
+```bat
 gcc main.c -o programa.exe
-./programa.exe
+programa.exe
 ```
 
----
+> Se um exercício tiver vários arquivos `.c`, compile todos:
+```bash
+gcc *.c -o programa
+```
 
-## 📘 Conceitos abordados
+## 🧭 Convenções sugeridas (organização)
 
-- Declaração e uso de variáveis (`int`, `float`, `char`, `double`, `bool`)
-- Uso de constantes (`#define` e `const`)
-- Entrada de dados com `scanf`
-- Saída de dados com `printf`
-- Operações matemáticas básicas
-- Estrutura de um programa em C (`main`, bibliotecas, retorno)
+Para manter tudo limpo e fácil de navegar:
 
----
+- Um exercício por pasta, por exemplo:
+  ```
+  U2-estrutura-de-controle-e-repetição/
+    ├─ ex-01-if-basico/
+    │   ├─ main.c
+    │   └─ README.md   (enunciado rápido + como rodar)
+  ```
+- Nome dos exercícios: `ex-XX-descricao-curta`.
+- Arquivo principal preferencial: `main.c`.
+- Se usar inputs de exemplo, crie um `inputs.txt`.
 
-## 🎯 Objetivo
+## ✅ Padrões de código
 
-Este repositório serve como material de apoio para quem está aprendendo C do zero.  
-Cada exemplo é simples e direto, ajudando a fixar conceitos fundamentais antes de avançar para tópicos mais complexos como:
+- Use `printf`/`scanf` com especificadores corretos (`%d`, `%f`, `%lf`, `%c`, `%s`).
+- Inicialize variáveis; evite lixo de memória.
+- Prefira funções pequenas e nomes claros (`calcularMedia`, `lerVetor`, etc.).
+- Comente pontos-chave (o “porquê” do código).
+- Para exercícios com arrays, valide índices e tamanhos.
 
-- Estruturas condicionais (`if`, `else`, `switch`)
-- Laços de repetição (`for`, `while`, `do while`)
-- Funções e arrays
-- Manipulação de strings
+> Dica: se desejar padronizar o estilo, adicione um `clang-format` futuramente.
 
----
+## 🧪 Testando rapidamente
 
-## ✍️ Autor
-**4L3M40**
+Você pode automatizar testes simples redirecionando entradas:
 
-📅 Projeto em constante evolução 🚀
+```bash
+./programa < inputs.txt
+```
+
+E comparar com um `expected.txt`:
+
+```bash
+./programa < inputs.txt > output.txt
+diff output.txt expected.txt
+```
+
+(Em Windows, use `fc expected.txt output.txt`.)
+
+## 🗺️ Roadmap (próximos passos)
+
+- [ ] Adicionar um `README.md` curto dentro de cada exercício com **enunciado** e **exemplo de execução**.  
+- [ ] Incluir casos de teste (`inputs.txt`/`expected.txt`) nos exercícios que dependem de entrada do usuário.  
+- [ ] (Opcional) Adicionar um `Makefile` para compilar com `make`.  
+- [ ] (Opcional) Habilitar **GitHub Actions** para compilar automaticamente os exercícios em cada *push*.  
+- [ ] (Opcional) Adicionar uma licença (`LICENSE`, por ex. MIT).  
+
+## 🤝 Contribuição
+
+1. Faça um fork do repositório  
+2. Crie um branch: `git checkout -b feat/nome-da-melhoria`  
+3. Commit: `git commit -m "feat: descreva a melhoria"`  
+4. Push: `git push origin feat/nome-da-melhoria`  
+5. Abra um Pull Request
+
+## 👤 Autor
+
+**4L3M40** — repositório em evolução com foco em aprendizagem contínua.
