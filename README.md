@@ -1,101 +1,83 @@
-# ALGORITMOS E PROGRAMAÇÃO ESTRUTURADA (C)
+# 💻 Algoritmos e Programação Estruturada  
+Repositório de **exercícios práticos** desenvolvido por **Evandro Wagencknecht** durante a disciplina *Algoritmos e Programação Estruturada* (Anhanguera, 2025).
 
-Material de apoio com exercícios práticos da disciplina **Algoritmos e Programação Estruturada** (Engenharia de Software).  
-Os exemplos estão em **C**, com foco em consolidar fundamentos, estruturas de controle, vetores/matrizes, `structs` e ponteiros.
+---
 
-## 📁 Estrutura do repositório
+## 📘 Sobre  
+Este repositório reúne todos os **exercícios e atividades práticas** realizadas ao longo da disciplina.  
+Os exemplos estão escritos em **linguagem C**, com foco em **consolidar fundamentos, estruturas de controle, vetores/matrizes, structs, ponteiros e funções**.
 
+Cada atividade busca aplicar conceitos de forma simples e progressiva, estimulando o raciocínio lógico e a boa prática da **programação estruturada**.
+
+---
+
+## 🗂 Estrutura do Repositório  
+O repositório está dividido por **unidades de aprendizagem**, organizadas conforme o conteúdo estudado na disciplina:
+
+- **U1 – Fundamentos de Algoritmos e Programação**  
+  Introdução à lógica de programação, variáveis, tipos de dados, operadores e estrutura básica de um programa em C.  
+  Exercícios de entrada e saída de dados, operações aritméticas e primeiros algoritmos.
+
+- **U2 – Estruturas de Controle e Repetição**  
+  Utilização de condicionais (`if`, `else`, `switch`) e laços de repetição (`for`, `while`, `do...while`).  
+  Exercícios envolvendo decisões, contadores, acumuladores e fluxos de execução.
+
+- **U3 – Vetores, Matrizes, Structs e Ponteiros**  
+  Manipulação de **vetores e matrizes**, incluindo leitura, soma, média e exibição de dados.  
+  Introdução ao uso de **structs** (registros compostos) e **ponteiros** para acesso e manipulação de memória.
+
+- **U4 – Funções e Passagem de Parâmetros**  
+  Criação e uso de **funções** para modularizar o código.  
+  Exercício principal: cálculo de **salário bruto, desconto e salário líquido** utilizando funções com parâmetros e retorno.
+
+---
+
+## 🛠 Como Compilar e Executar  
+
+Os programas foram desenvolvidos utilizando o compilador **GCC** e testados na plataforma [OnlineGDB](https://www.onlinegdb.com/).  
+Você pode executar localmente com os seguintes comandos:
+
+### 🔹 No Linux / macOS:
+```bash
+gcc nome_do_programa.c -o nome_do_programa
+./nome_do_programa
 ```
+
+### 🔹 No Windows:
+```powershell
+gcc nome_do_programa.c -o nome_do_programa.exe
 .
-├─ U1-fundamento-de-algoritimos-e-programação/
-├─ U2-estrutura-de-controle-e-repetição/
-├─ U3-vetores-matrizes-structs-ponteiros/
-└─ .vscode/   (configurações do VS Code, se aplicável)
+ome_do_programa.exe
 ```
 
-Cada pasta agrupa exercícios por unidade/tema da disciplina.
+---
 
-## 🚀 Como executar os exercícios
+## 📚 Conceitos Aplicados  
+Durante o desenvolvimento dos exercícios, foram aplicados os principais conceitos de programação estruturada:
 
-> Requisitos: **GCC** (ou MinGW no Windows) e terminal (bash, PowerShell, CMD). Qualquer editor de texto/IDE funciona; recomenda-se **VS Code**.
+- Declaração e uso de **variáveis e constantes**;  
+- Estruturas **sequenciais, condicionais e de repetição**;  
+- Manipulação de **vetores e matrizes**;  
+- Definição e utilização de **structs e ponteiros**;  
+- Modularização de código com **funções e passagem de parâmetros**;  
+- Entrada e saída de dados via terminal (`scanf()` / `printf()`);  
+- Organização e clareza na escrita de código em C.  
 
-### Linux / macOS
-No diretório do exercício (onde está o `main.c` ou o arquivo fonte principal):
+---
 
-```bash
-gcc main.c -o programa
-./programa
-```
+## 🎯 Objetivo do Repositório  
+Servir como **material de estudo** e **referência prática** para estudantes e iniciantes em C que desejam entender os fundamentos da programação estruturada por meio de exemplos reais e comentados.
 
-### Windows (PowerShell/CMD)
-```bat
-gcc main.c -o programa.exe
-programa.exe
-```
+---
 
-> Se um exercício tiver vários arquivos `.c`, compile todos:
-```bash
-gcc *.c -o programa
-```
+## 👨‍💻 Autor  
+**Evandro Wagencknecht**  
+Disciplina: *Algoritmos e Programação Estruturada*  
+Instituição: Anhanguera  
+Ano: 2025  
 
-## 🧭 Convenções sugeridas (organização)
+---
 
-Para manter tudo limpo e fácil de navegar:
-
-- Um exercício por pasta, por exemplo:
-  ```
-  U2-estrutura-de-controle-e-repetição/
-    ├─ ex-01-if-basico/
-    │   ├─ main.c
-    │   └─ README.md   (enunciado rápido + como rodar)
-  ```
-- Nome dos exercícios: `ex-XX-descricao-curta`.
-- Arquivo principal preferencial: `main.c`.
-- Se usar inputs de exemplo, crie um `inputs.txt`.
-
-## ✅ Padrões de código
-
-- Use `printf`/`scanf` com especificadores corretos (`%d`, `%f`, `%lf`, `%c`, `%s`).
-- Inicialize variáveis; evite lixo de memória.
-- Prefira funções pequenas e nomes claros (`calcularMedia`, `lerVetor`, etc.).
-- Comente pontos-chave (o “porquê” do código).
-- Para exercícios com arrays, valide índices e tamanhos.
-
-> Dica: se desejar padronizar o estilo, adicione um `clang-format` futuramente.
-
-## 🧪 Testando rapidamente
-
-Você pode automatizar testes simples redirecionando entradas:
-
-```bash
-./programa < inputs.txt
-```
-
-E comparar com um `expected.txt`:
-
-```bash
-./programa < inputs.txt > output.txt
-diff output.txt expected.txt
-```
-
-(Em Windows, use `fc expected.txt output.txt`.)
-
-## 🗺️ Roadmap (próximos passos)
-
-- [ ] Adicionar um `README.md` curto dentro de cada exercício com **enunciado** e **exemplo de execução**.  
-- [ ] Incluir casos de teste (`inputs.txt`/`expected.txt`) nos exercícios que dependem de entrada do usuário.  
-- [ ] (Opcional) Adicionar um `Makefile` para compilar com `make`.  
-- [ ] (Opcional) Habilitar **GitHub Actions** para compilar automaticamente os exercícios em cada *push*.  
-- [ ] (Opcional) Adicionar uma licença (`LICENSE`, por ex. MIT).  
-
-## 🤝 Contribuição
-
-1. Faça um fork do repositório  
-2. Crie um branch: `git checkout -b feat/nome-da-melhoria`  
-3. Commit: `git commit -m "feat: descreva a melhoria"`  
-4. Push: `git push origin feat/nome-da-melhoria`  
-5. Abra um Pull Request
-
-## 👤 Autor
-
-**4L3M40** — repositório em evolução com foco em aprendizagem contínua.
+## 📄 Licença  
+Este material é de uso **educacional e livre para estudo**.  
+Você pode copiar, adaptar e reutilizar o conteúdo, desde que mantenha os devidos créditos ao autor.
